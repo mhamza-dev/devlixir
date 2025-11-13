@@ -115,3 +115,76 @@ body {
   background-size: 1000px 100%;
   animation: shimmer 3s infinite;
 }
+
+/* Tech icon hover gradient effect - using attribute selector */
+.group:hover [data-gradient-id="gradient-elixir"] .tech-icon-path {
+  fill: url(#gradient-elixir) !important;
+}
+
+.group:hover [data-gradient-id="gradient-phoenix"] .tech-icon-path {
+  fill: url(#gradient-phoenix) !important;
+}
+
+.group:hover [data-gradient-id="gradient-python"] .tech-icon-path {
+  fill: url(#gradient-python) !important;
+}
+
+.group:hover [data-gradient-id="gradient-flask"] .tech-icon-path {
+  fill: url(#gradient-flask) !important;
+}
+
+.group:hover [data-gradient-id="gradient-laravel"] .tech-icon-path {
+  fill: url(#gradient-laravel) !important;
+}
+
+.group:hover [data-gradient-id="gradient-node.js"] .tech-icon-path {
+  fill: url(#gradient-node.js) !important;
+}
+
+.group:hover [data-gradient-id="gradient-nestjs"] .tech-icon-path {
+  fill: url(#gradient-nestjs) !important;
+}
+
+.group:hover [data-gradient-id="gradient-react"] .tech-icon-path {
+  fill: url(#gradient-react) !important;
+}
+
+.group:hover [data-gradient-id="gradient-angular"] .tech-icon-path {
+  fill: url(#gradient-angular) !important;
+}
+
+.group:hover [data-gradient-id="gradient-next.js"] .tech-icon-path {
+  fill: url(#gradient-next.js) !important;
+}
+
+.group:hover [data-gradient-id="gradient-tailwind"] .tech-icon-path {
+  fill: url(#gradient-tailwind) !important;
+}
+
+.group:hover [data-gradient-id="gradient-react-native"] .tech-icon-path {
+  fill: url(#gradient-react-native) !important;
+}
+
+.group:hover [data-gradient-id="gradient-postgresql"] .tech-icon-path {
+  fill: url(#gradient-postgresql) !important;
+}
+
+.group:hover [data-gradient-id="gradient-mongodb"] .tech-icon-path {
+  fill: url(#gradient-mongodb) !important;
+}
+
+.group:hover [data-gradient-id="gradient-redis"] .tech-icon-path {
+  fill: url(#gradient-redis) !important;
+}
+
+.group:hover [data-gradient-id="gradient-docker"] .tech-icon-path {
+  fill: url(#gradient-docker) !important;
+}
+
+.group:hover [data-gradient-id="gradient-kubernetes"] .tech-icon-path {
+  fill: url(#gradient-kubernetes) !important;
+}
+
+.group:hover [data-gradient-id="gradient-aws"] .tech-icon-path {
+  fill: url(#gradient-aws) !important;
+}

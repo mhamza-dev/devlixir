@@ -37,18 +37,49 @@ const stats = [
 ];
 
 export default function Stats() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      className="py-16 px-4 sm:px-6 lg:px-8"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
+              variants={{
+                hidden: { opacity: 0, scale: 0.5, y: 50 },
+                visible: { 
+                  opacity: 1, 
+                  scale: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    type: "spring",
+                    stiffness: 100
+                  }
+                }
+              }}
+              whileHover={{ 
+                scale: 1.1,
+                y: -10,
+                transition: { duration: 0.2 }
+              }}
+              className="text-center cursor-pointer"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -64,7 +95,7 @@ export default function Stats() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

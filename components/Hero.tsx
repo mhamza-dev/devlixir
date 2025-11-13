@@ -1,35 +1,68 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "./Button";
 import Image from "next/image";
 
+interface Particle {
+  id: number;
+  initialX: number;
+  initialY: number;
+  targetX: number;
+  targetY: number;
+  duration: number;
+  delay: number;
+}
+
 export default function Hero() {
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window !== 'undefined') {
+      const newParticles: Particle[] = Array.from({ length: 20 }, (_, i) => ({
+        id: i,
+        initialX: Math.random() * window.innerWidth,
+        initialY: Math.random() * window.innerHeight,
+        targetX: Math.random() * window.innerWidth,
+        targetY: Math.random() * window.innerHeight,
+        duration: Math.random() * 10 + 10,
+        delay: Math.random() * 5,
+      }));
+      setParticles(newParticles);
+    }
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Particles */}
-      <div className="absolute inset-0 z-0">
-        {typeof window !== 'undefined' && [...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] rounded-full opacity-30"
-            initial={{
-              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
-              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
-            }}
-            animate={{
-              y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)],
-              x: [null, Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920)],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-          />
-        ))}
-      </div>
+      {mounted && (
+        <div className="absolute inset-0 z-0">
+          {particles.map((particle) => (
+            <motion.div
+              key={particle.id}
+              className="absolute w-1 h-1 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] rounded-full opacity-30"
+              initial={{
+                x: particle.initialX,
+                y: particle.initialY,
+              }}
+              animate={{
+                y: [particle.initialY, particle.targetY],
+                x: [particle.initialX, particle.targetX],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: particle.duration,
+                repeat: Infinity,
+                delay: particle.delay,
+                ease: "linear",
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Background Network SVG */}
       <motion.div

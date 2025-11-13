@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
+import TechIcon from "./TechIcon";
 
 const techCategories = [
   {
     category: "Backend",
-    techs: ["Elixir", "Phoenix", "Python", "Flask", "Laravel", "Node.js"],
+    techs: ["Elixir", "Phoenix", "Python", "Flask", "Laravel", "Node.js", "NestJS"],
   },
   {
     category: "Frontend",
@@ -50,17 +51,18 @@ export default function TechStack() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.techs.map((tech, techIndex) => (
-                  <motion.span
+                  <motion.div
                     key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: categoryIndex * 0.1 + techIndex * 0.05 }}
                     whileHover={{ scale: 1.15, y: -4 }}
-                    className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm font-medium text-white/90 hover:bg-white/10 hover:border-[#7C3AED]/50 hover:glow-purple transition-all duration-300 cursor-pointer"
+                    className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm font-medium text-white/90 hover:bg-white/10 hover:border-[#7C3AED]/50 hover:glow-purple transition-all duration-300 cursor-pointer"
                   >
-                    {tech}
-                  </motion.span>
+                    <TechIcon name={tech} className="w-5 h-5 flex-shrink-0" />
+                    <span>{tech}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

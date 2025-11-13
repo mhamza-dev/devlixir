@@ -10,21 +10,47 @@ interface SectionTitleProps {
 }
 
 export default function SectionTitle({ title, subtitle, className }: SectionTitleProps) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
       className={cn("text-center mb-12", className)}
     >
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+      <motion.h2
+        variants={itemVariants}
+        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        className="text-4xl md:text-5xl font-bold mb-4 gradient-text"
+      >
         {title}
-      </h2>
+      </motion.h2>
       {subtitle && (
-        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+        <motion.p
+          variants={itemVariants}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          className="text-lg text-white/70 max-w-2xl mx-auto"
+        >
           {subtitle}
-        </p>
+        </motion.p>
       )}
     </motion.div>
   );

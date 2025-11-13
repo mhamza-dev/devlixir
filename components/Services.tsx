@@ -38,8 +38,25 @@ const services = [
 ];
 
 export default function Services() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <section id="services" className="py-24 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      id="services"
+      className="py-24 px-4 sm:px-6 lg:px-8"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto">
         <SectionTitle
           title="Our Services"
@@ -52,11 +69,27 @@ export default function Services() {
             return (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                variants={{
+                  hidden: { opacity: 0, y: 30, scale: 0.9, rotateY: -15 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    rotateY: 0,
+                    transition: {
+                      duration: 0.6,
+                      delay: index * 0.1,
+                      type: "spring",
+                      stiffness: 100
+                    }
+                  }
+                }}
+                whileHover={{
+                  y: -12,
+                  scale: 1.03,
+                  rotateY: 5,
+                  transition: { duration: 0.3 }
+                }}
                 className="glass rounded-2xl p-6 hover:glow-hover transition-all duration-300 group cursor-pointer"
               >
                 <motion.div
@@ -77,7 +110,7 @@ export default function Services() {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

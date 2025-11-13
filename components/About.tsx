@@ -10,8 +10,8 @@ export default function About() {
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <SectionTitle
-          title="Meet the Founder"
-          subtitle="Expertise that sets us apart"
+          title="About REZON"
+          subtitle="Where expertise meets innovation, and code meets excellence"
         />
 
         <div className="max-w-4xl mx-auto">
@@ -46,10 +46,16 @@ export default function About() {
                   Muhammad Hamza
                 </h3>
                 <p className="text-xl text-white/80 mb-4">Founder & Lead Engineer</p>
+                <p className="text-white/70 leading-relaxed mb-4">
+                  With over 5+ years of deep expertise in Elixir and Phoenix, Muhammad Hamza is a seasoned engineer
+                  who has architected and delivered production-grade systems handling millions of concurrent users.
+                  His passion for building fault-tolerant, real-time applications has led to the creation of REZON—a
+                  team of elite engineers dedicated to excellence.
+                </p>
                 <p className="text-white/70 leading-relaxed">
-                  With deep expertise in Elixir and Phoenix, Muhammad Hamza leads a team of exceptional engineers
-                  dedicated to building systems that scale. Our Elixir expertise is unmatched—bet you'll never find a better team
-                  for your real-time, fault-tolerant applications.
+                  Under his leadership, REZON has become synonymous with unmatched Elixir expertise. We've built
+                  everything from high-frequency trading platforms to real-time collaboration tools, always prioritizing
+                  scalability, maintainability, and performance. Bet you'll never find a better team for your mission-critical applications.
                 </p>
               </div>
             </div>
@@ -57,50 +63,95 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="glass rounded-2xl p-6 text-center"
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.6,
+                delay: 0.1,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
+              className="glass rounded-2xl p-6 text-center cursor-pointer group"
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] flex items-center justify-center mx-auto mb-4">
+              <motion.div
+                className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] flex items-center justify-center mx-auto mb-4"
+                whileHover={{ rotate: 360, scale: 1.1 }}
+                transition={{ duration: 0.6 }}
+              >
                 <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-2 text-white">Elixir Experts</h4>
+              </motion.div>
+              <h4 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">Elixir Experts</h4>
               <p className="text-white/70 text-sm">
-                Years of experience building production Elixir systems. You won't find better.
+                5+ years of production Elixir experience. We've built systems handling millions of concurrent connections.
+                Our expertise in OTP, GenServer patterns, and Phoenix LiveView is unmatched in the industry.
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass rounded-2xl p-6 text-center"
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
+              className="glass rounded-2xl p-6 text-center cursor-pointer group"
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] flex items-center justify-center mx-auto mb-4">
+              <motion.div
+                className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] flex items-center justify-center mx-auto mb-4"
+                whileHover={{ rotate: 360, scale: 1.1 }}
+                transition={{ duration: 0.6 }}
+              >
                 <Award className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-2 text-white">Proven Track Record</h4>
+              </motion.div>
+              <h4 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">Proven Track Record</h4>
               <p className="text-white/70 text-sm">
-                Delivered countless successful projects with zero compromises on quality.
+                100+ projects delivered across fintech, healthcare, and SaaS. Zero downtime deployments, 99.9% uptime
+                guarantees, and clients who trust us with their most critical systems.
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="glass rounded-2xl p-6 text-center"
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.6,
+                delay: 0.3,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
+              className="glass rounded-2xl p-6 text-center cursor-pointer group"
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] flex items-center justify-center mx-auto mb-4">
+              <motion.div
+                className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] flex items-center justify-center mx-auto mb-4"
+                whileHover={{ rotate: 360, scale: 1.1 }}
+                transition={{ duration: 0.6 }}
+              >
                 <Users className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-2 text-white">Elite Team</h4>
+              </motion.div>
+              <h4 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">Elite Team</h4>
               <p className="text-white/70 text-sm">
-                Handpicked engineers who share our passion for excellence and innovation.
+                Handpicked senior engineers with expertise across Elixir, MERN/MEAN, Laravel, Python, and React Native.
+                We don't just code—we architect solutions that stand the test of time.
               </p>
             </motion.div>
           </div>
