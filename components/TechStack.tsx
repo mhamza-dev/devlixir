@@ -6,7 +6,7 @@ import SectionTitle from "./SectionTitle";
 const techCategories = [
   {
     category: "Backend",
-    techs: ["Elixir", "Phoenix", "Laravel", "Node.js"],
+    techs: ["Elixir", "Phoenix", "Python", "Flask", "Laravel", "Node.js"],
   },
   {
     category: "Frontend",

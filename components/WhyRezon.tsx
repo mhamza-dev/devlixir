@@ -5,6 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 const statements = [
+  "Elixir expertise unmatched—bet you'll never find a better team.",
   "We design for scale, not patches.",
   "We write clean, maintainable code.",
   "We ship production-ready systems.",
@@ -19,7 +20,7 @@ export default function WhyRezon() {
           subtitle="Built for the long term, designed for excellence"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {statements.map((statement, index) => (
             <motion.div
               key={index}

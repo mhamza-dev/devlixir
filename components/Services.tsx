@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Database, Smartphone, Server } from "lucide-react";
+import { Code2, Database, Smartphone, Server, Code } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 const services = [
@@ -29,6 +29,12 @@ const services = [
     icon: Smartphone,
     gradient: "from-indigo-500 to-purple-500",
   },
+  {
+    title: "Python/Flask Development",
+    description: "Scalable Python applications with Flask framework for rapid API development and microservices.",
+    icon: Code,
+    gradient: "from-yellow-500 to-orange-500",
+  },
 ];
 
 export default function Services() {
@@ -40,7 +46,7 @@ export default function Services() {
           subtitle="Comprehensive development solutions tailored to your needs"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

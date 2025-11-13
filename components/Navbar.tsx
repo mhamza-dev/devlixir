@@ -31,6 +31,9 @@ export default function Navbar() {
             <a href="#services" className="text-white/80 hover:text-white transition-colors">
               Services
             </a>
+            <a href="#about" className="text-white/80 hover:text-white transition-colors">
+              About
+            </a>
             <a href="#tech" className="text-white/80 hover:text-white transition-colors">
               Tech Stack
             </a>
