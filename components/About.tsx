@@ -23,8 +23,15 @@ export default function About() {
             className="glass rounded-2xl p-8 md:p-12 mb-12"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
-              <div className="relative w-32 h-32 flex-shrink-0 rounded-full p-1 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]">
-                <div className="w-full h-full rounded-full overflow-hidden bg-[#0B0D11]">
+              <motion.div
+                className="relative w-32 h-32 flex-shrink-0 rounded-full p-1 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]"
+                whileHover={{ scale: 1.1, rotate: [0, -5, 5, -5, 0] }}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.div
+                  className="w-full h-full rounded-full overflow-hidden bg-[#0B0D11]"
+                  whileHover={{ scale: 1.05 }}
+                >
                   <Image
                     src="/founder_image.png"
                     alt="Muhammad Hamza"
@@ -32,8 +39,8 @@ export default function About() {
                     height={128}
                     className="w-full h-full object-cover"
                   />
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               <div className="text-center md:text-left flex-1">
                 <h3 className="text-3xl font-bold mb-2 gradient-text">
                   Muhammad Hamza

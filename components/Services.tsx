@@ -52,19 +52,24 @@ export default function Services() {
             return (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass rounded-2xl p-6 hover:glow-hover transition-all duration-300 group"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="glass rounded-2xl p-6 hover:glow-hover transition-all duration-300 group cursor-pointer"
               >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <motion.div
+                  className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  whileHover={{ rotate: [0, -10, 10, -10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
                   <Icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white">
+                </motion.div>
+                <h3 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">
                   {service.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                   {service.description}
                 </p>
               </motion.div>

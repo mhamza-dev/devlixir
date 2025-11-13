@@ -7,8 +7,42 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated Background Particles */}
+      <div className="absolute inset-0 z-0">
+        {typeof window !== 'undefined' && [...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] rounded-full opacity-30"
+            initial={{
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
+            }}
+            animate={{
+              y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)],
+              x: [null, Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920)],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Background Network SVG */}
-      <div className="absolute inset-0 z-0 opacity-20">
+      <motion.div
+        className="absolute inset-0 z-0 opacity-20"
+        animate={{
+          opacity: [0.15, 0.25, 0.15],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <div className="relative w-full h-full">
           <Image
             src="/hero-network.svg"
@@ -19,7 +53,7 @@ export default function Hero() {
             sizes="100vw"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0D11] via-[#0B0D11]/80 to-[#0F1117] z-10" />
@@ -39,10 +73,35 @@ export default function Hero() {
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             Engineering That{" "}
-            <span className="gradient-text">Scales.</span>
+            <motion.span
+              className="gradient-text inline-block"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              Scales.
+            </motion.span>
             <br />
             Code That{" "}
-            <span className="gradient-text">Performs.</span>
+            <motion.span
+              className="gradient-text inline-block"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+            >
+              Performs.
+            </motion.span>
           </motion.h1>
 
           <motion.p
