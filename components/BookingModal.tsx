@@ -30,6 +30,7 @@ export default function BookingModal({
     const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
 
     if (!isOpen) return null;
+    console.log("calendlyUrl->", calendlyUrl);
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
@@ -60,6 +61,7 @@ export default function BookingModal({
                             const url = `${baseUrl}${baseUrl.includes("?") ? "&" : "?"
                                 }email=${encodeURIComponent(trimmedEmail)}`;
 
+                            console.log(url);
                             setCalendlyUrl(url);
                         }}
                     >
