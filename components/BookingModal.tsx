@@ -54,6 +54,7 @@ export default function BookingModal({
                         initialValues={{ email: "" }}
                         validationSchema={BookingSchema}
                         onSubmit={(values) => {
+                            console.log("values->", values, process.env.NEXT_PUBLIC_CALENDLY_BOOKING_URL);
                             const baseUrl = process.env.NEXT_PUBLIC_CALENDLY_BOOKING_URL ?? "";
                             if (!baseUrl) return;
 
