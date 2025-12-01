@@ -30,7 +30,6 @@ export default function BookingModal({
     const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
 
     if (!isOpen) return null;
-    console.log("calendlyUrl->", calendlyUrl);
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
@@ -54,7 +53,6 @@ export default function BookingModal({
                         initialValues={{ email: "" }}
                         validationSchema={BookingSchema}
                         onSubmit={(values) => {
-                            console.log("values->", values, process.env.NEXT_PUBLIC_CALENDLY_BOOKING_URL);
                             const baseUrl = process.env.NEXT_PUBLIC_CALENDLY_BOOKING_URL ?? "";
                             if (!baseUrl) return;
 
@@ -62,7 +60,6 @@ export default function BookingModal({
                             const url = `${baseUrl}${baseUrl.includes("?") ? "&" : "?"
                                 }email=${encodeURIComponent(trimmedEmail)}`;
 
-                            console.log(url);
                             setCalendlyUrl(url);
                         }}
                     >
