@@ -1,41 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Database, Smartphone, Server, Code } from "lucide-react";
 import SectionTitle from "./SectionTitle";
-
-const services = [
-  {
-    title: "Elixir Development",
-    description: "Real-time, fault-tolerant systems built with Elixir and Phoenix for unmatched scalability.",
-    icon: Server,
-    gradient: "from-purple-500 to-pink-500",
-  },
-  {
-    title: "MERN/MEAN Development",
-    description: "Full-stack applications using MongoDB, Express, React/Angular, and Node.js.",
-    icon: Code2,
-    gradient: "from-blue-500 to-cyan-500",
-  },
-  {
-    title: "Laravel Development",
-    description: "Robust PHP applications with Laravel framework for rapid development.",
-    icon: Database,
-    gradient: "from-red-500 to-orange-500",
-  },
-  {
-    title: "React Native Apps",
-    description: "Cross-platform mobile applications with native performance and smooth UX.",
-    icon: Smartphone,
-    gradient: "from-indigo-500 to-purple-500",
-  },
-  {
-    title: "Python/Flask Development",
-    description: "Scalable Python applications with Flask framework for rapid API development and microservices.",
-    icon: Code,
-    gradient: "from-yellow-500 to-orange-500",
-  },
-];
+import { services } from "@/constants";
 
 export default function Services() {
   const containerVariants = {

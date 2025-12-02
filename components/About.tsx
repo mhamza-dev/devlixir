@@ -45,17 +45,20 @@ export default function About() {
                 <h3 className="text-3xl font-bold mb-2 gradient-text">
                   Muhammad Hamza
                 </h3>
-                <p className="text-xl text-white/80 mb-4">Founder & Lead Engineer</p>
+                <p className="text-xl text-white/80 mb-4">
+                  Founder & Principal Software Engineer, REZON
+                </p>
                 <p className="text-white/70 leading-relaxed mb-4">
-                  With over 5+ years of deep expertise in Elixir and Phoenix, Muhammad Hamza is a seasoned engineer
-                  who has architected and delivered production-grade systems handling millions of concurrent users.
-                  His passion for building fault-tolerant, real-time applications has led to the creation of REZON—a
-                  team of elite engineers dedicated to excellence.
+                  Muhammad Hamza is the founder of REZON, a software services company focused on building and
+                  maintaining high-impact digital products. With 5+ years of experience shipping production-grade
+                  systems, he leads a team that helps businesses design, develop, upgrade, and maintain applications
+                  across Php/Laravel, MEAN & MERN stacks, Elixir/Phoenix, React Native, and Python/Flask.
                 </p>
                 <p className="text-white/70 leading-relaxed">
-                  Under his leadership, REZON has become synonymous with unmatched Elixir expertise. We've built
-                  everything from high-frequency trading platforms to real-time collaboration tools, always prioritizing
-                  scalability, maintainability, and performance. Bet you'll never find a better team for your mission-critical applications.
+                  Under his leadership, REZON has grown into a long-term technology partner for startups and enterprises
+                  alike—owning everything from new product builds to ongoing feature delivery, refactors, and
+                  maintenance. The focus is simple: reliable engineering, clear communication, and software that keeps
+                  delivering value long after launch.
                 </p>
               </div>
             </div>
@@ -86,10 +89,13 @@ export default function About() {
               >
                 <Zap className="w-8 h-8 text-white" />
               </motion.div>
-              <h4 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">Elixir Experts</h4>
+              <h4 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">
+                Polyglot Engineering
+              </h4>
               <p className="text-white/70 text-sm">
-                5+ years of production Elixir experience. We've built systems handling millions of concurrent connections.
-                Our expertise in OTP, GenServer patterns, and Phoenix LiveView is unmatched in the industry.
+                Deep, hands-on experience across Php/Laravel, MEAN & MERN, Elixir/Phoenix, React Native, and
+                Python/Flask. We pick the right stack for your problem instead of forcing everything into one
+                technology.
               </p>
             </motion.div>
 
@@ -150,8 +156,8 @@ export default function About() {
               </motion.div>
               <h4 className="text-xl font-bold mb-2 text-white group-hover:gradient-text transition-all duration-300">Elite Team</h4>
               <p className="text-white/70 text-sm">
-                Handpicked senior engineers with expertise across Elixir, MERN/MEAN, Laravel, Python, and React Native.
-                We don't just code—we architect solutions that stand the test of time.
+                Handpicked senior engineers with expertise across backend, frontend, and mobile stacks. We don't just
+                code—we architect, ship, and maintain solutions that stand the test of time.
               </p>
             </motion.div>
           </div>

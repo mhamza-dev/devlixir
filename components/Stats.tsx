@@ -29,12 +29,7 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
   return <span ref={ref}>0{suffix}</span>;
 }
 
-const stats = [
-  { value: 100, suffix: "+", label: "Projects Delivered" },
-  { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 5, suffix: "+", label: "Years Experience" },
-  { value: 99, suffix: "%", label: "Client Satisfaction" },
-];
+import { stats } from "@/constants";
 
 export default function Stats() {
   const containerVariants = {

@@ -3,13 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
-
-const statements = [
-  "Elixir expertise unmatched—bet you'll never find a better team.",
-  "We design for scale, not patches.",
-  "We write clean, maintainable code.",
-  "We ship production-ready systems.",
-];
+import { whyRezonStatements } from "@/constants";
 
 export default function WhyRezon() {
   return (
@@ -21,7 +15,7 @@ export default function WhyRezon() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {statements.map((statement, index) => (
+          {whyRezonStatements.map((statement, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, scale: 0.9 }}

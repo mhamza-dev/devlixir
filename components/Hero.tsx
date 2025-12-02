@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "./Button";
 import Image from "next/image";
+import ProjectSubmissionModal from "./ProjectSubmissionModal";
 
 interface Particle {
   id: number;
@@ -18,6 +19,7 @@ interface Particle {
 export default function Hero() {
   const [particles, setParticles] = useState<Particle[]>([]);
   const [mounted, setMounted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -143,7 +145,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            We architect real-time, fault-tolerant systems using Elixir. Also delivering MERN/MEAN, Laravel, and React Native solutions.
+            We are a full-service software engineering studio building and maintaining products across Php/Laravel, MEAN & MERN stacks, Elixir/Phoenix, React Native, and Python/Flask. From greenfield builds to long-term maintenance and upgrades, we keep your software fast, scalable, and reliable.
           </motion.p>
 
           <motion.div
@@ -152,15 +154,26 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button variant="primary" className="w-full sm:w-auto">
+            <Button
+              variant="primary"
+              className="w-full sm:w-auto"
+              onClick={() => setIsModalOpen(true)}
+            >
               Start a Project
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto">
-              View Work
-            </Button>
+            {/* <Button
+              variant="outline"
+              className="w-full sm:w-auto"
+              onClick={() => {
+                document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              View Our Work
+            </Button> */}
           </motion.div>
         </motion.div>
       </div>
+      <ProjectSubmissionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

@@ -8,6 +8,8 @@ import Stats from "@/components/Stats";
 import About from "@/components/About";
 import WhyRezon from "@/components/WhyRezon";
 import TechStack from "@/components/TechStack";
+// import Portfolio from "@/components/Portfolio";
+// import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
 
 const containerVariants = {
@@ -43,12 +45,12 @@ export default function Home() {
         >
           <Hero />
         </motion.div>
-        <motion.div
+        {/* <motion.div
           variants={sectionVariants}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
           <Stats />
-        </motion.div>
+        </motion.div> */}
         <motion.div
           variants={sectionVariants}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -73,6 +75,18 @@ export default function Home() {
         >
           <TechStack />
         </motion.div>
+        {/* <motion.div
+          variants={sectionVariants}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <Portfolio />
+        </motion.div>
+        <motion.div
+          variants={sectionVariants}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <Testimonials />
+        </motion.div> */}
         <motion.div
           variants={sectionVariants}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}

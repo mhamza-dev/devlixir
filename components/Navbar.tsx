@@ -4,9 +4,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Button from "./Button";
+import ProjectSubmissionModal from "./ProjectSubmissionModal";
+import { navLinks } from "@/constants";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
@@ -23,12 +26,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#tech", label: "Tech Stack" },
-    { href: "#contact", label: "Contact" },
-  ];
 
   return (
     <motion.nav
@@ -84,12 +81,17 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button variant="primary" className="hidden md:block">
+            <Button
+              variant="primary"
+              className="hidden md:block"
+              onClick={() => setIsModalOpen(true)}
+            >
               Get Started
             </Button>
           </motion.div>
         </div>
       </div>
+      <ProjectSubmissionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </motion.nav>
   );
 }

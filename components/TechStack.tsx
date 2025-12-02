@@ -3,29 +3,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 import TechIcon from "./TechIcon";
-
-const techCategories = [
-  {
-    category: "Backend",
-    techs: ["Elixir", "Phoenix", "Python", "Flask", "Laravel", "Node.js", "NestJS"],
-  },
-  {
-    category: "Frontend",
-    techs: ["React", "Angular", "Next.js", "Tailwind"],
-  },
-  {
-    category: "Mobile",
-    techs: ["React Native"],
-  },
-  {
-    category: "Databases",
-    techs: ["PostgreSQL", "MongoDB", "Redis"],
-  },
-  {
-    category: "Cloud/Infra",
-    techs: ["Docker", "Kubernetes", "AWS"],
-  },
-];
+import { techCategories } from "@/constants";
 
 export default function TechStack() {
   return (
