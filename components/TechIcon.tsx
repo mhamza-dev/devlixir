@@ -26,7 +26,9 @@ const iconNameMap: Record<string, string> = {
   "Redis": "redis",
   "Docker": "docker",
   "Kubernetes": "kubernetes",
-  "AWS": "amazonaws",
+  "AWS": "amazon-aws",
+  "AI Integration": "openai",
+  "AI Automation": "tensorflow",
 };
 
 export default function TechIcon({ name, className = "w-5 h-5" }: TechIconProps) {
@@ -42,9 +44,26 @@ export default function TechIcon({ name, className = "w-5 h-5" }: TechIconProps)
   }
 
   // Find icon by slug from simple-icons
-  const icon = Object.values(simpleIcons).find(
-    (icon: any) => icon && typeof icon === 'object' && icon.slug === iconSlug
-  ) as any;
+  // Try direct access first (for known icons like AWS)
+  let icon: any;
+  try {
+    const iconKey = Object.keys(simpleIcons).find(
+      (key) => (simpleIcons as any)[key]?.slug === iconSlug
+    );
+    if (iconKey) {
+      icon = (simpleIcons as any)[iconKey];
+    } else {
+      // Fallback to searching all values
+      icon = Object.values(simpleIcons).find(
+        (icon: any) => icon && typeof icon === 'object' && icon.slug === iconSlug
+      ) as any;
+    }
+  } catch (e) {
+    // If direct access fails, use the original search method
+    icon = Object.values(simpleIcons).find(
+      (icon: any) => icon && typeof icon === 'object' && icon.slug === iconSlug
+    ) as any;
+  }
 
   if (!icon || !icon.path) {
     return (

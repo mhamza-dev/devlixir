@@ -6,7 +6,7 @@ export function getUserConfirmationTemplate(payload: ProjectSubmissionEmailPaylo
     `Hi,`,
     ``,
     `Thank you for submitting your project "${payload.projectName}".`,
-    `Our team at REZON will review the details and get back to you shortly.`,
+    `Our team at Devlixir will review the details and get back to you shortly.`,
     ``,
     `Summary:`,
     `- Role type: ${payload.roleType}`,
@@ -14,7 +14,7 @@ export function getUserConfirmationTemplate(payload: ProjectSubmissionEmailPaylo
     `- Phone: ${payload.phone}`,
     ``,
     `Best,`,
-    `REZON`,
+    `Devlixir`,
   ].join("\n");
 
   const html = `
@@ -25,7 +25,7 @@ export function getUserConfirmationTemplate(payload: ProjectSubmissionEmailPaylo
               <td style="padding-bottom:24px;text-align:center;">
                 <div style="display:inline-flex;align-items:center;gap:8px;">
                   <div style="width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,#7C3AED,#3B82F6);"></div>
-                  <span style="font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;">Rezon</span>
+                  <span style="font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;">Devlixir</span>
                 </div>
               </td>
             </tr>
@@ -74,10 +74,10 @@ export function getUserConfirmationTemplate(payload: ProjectSubmissionEmailPaylo
             <tr>
               <td style="padding:0 24px 22px 24px;">
                 <p style="margin:0;font-size:12px;line-height:1.6;color:#9ca3af;">
-                  You’re receiving this email because you submitted a project on the REZON website.
+                  You’re receiving this email because you submitted a project on the Devlixir website.
                 </p>
                 <p style="margin:4px 0 0 0;font-size:12px;line-height:1.6;color:#9ca3af;">
-                  Best,<br/>The REZON team
+                  Best,<br/>The Devlixir team
                 </p>
               </td>
             </tr>
@@ -121,7 +121,7 @@ export function getInternalNotificationTemplate(
               <td style="padding-bottom:24px;text-align:left;">
                 <div style="display:inline-flex;align-items:center;gap:8px;">
                   <div style="width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,#7C3AED,#3B82F6);"></div>
-                  <span style="font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;">Rezon – New Project</span>
+                  <span style="font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;">Devlixir – New Project</span>
                 </div>
               </td>
             </tr>

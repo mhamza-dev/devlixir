@@ -1,12 +1,9 @@
-import { Code2, Database, Smartphone, Server, Code } from "lucide-react";
+import { Code2, Database, Smartphone, Server, Code, Flame, FileCode } from "lucide-react";
 
 // Navigation
 export const navLinks = [
     { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
     { href: "#tech", label: "Tech Stack" },
-    // { href: "#portfolio", label: "Portfolio" },
-    // { href: "#testimonials", label: "Testimonials" },
     { href: "#contact", label: "Contact" },
 ];
 
@@ -22,10 +19,18 @@ export const stats = [
 
 export const services = [
     {
-        title: "Elixir Development",
-        description: "Real-time, fault-tolerant systems built with Elixir and Phoenix for unmatched scalability.",
+        title: "AI Integration & Automation",
+        description:
+            "Practical AI integration and workflow automation using modern models and APIs to streamline operations and augment existing products.",
         icon: Server,
         gradient: "from-purple-500 to-pink-500",
+    },
+    {
+        title: "Elixir Development",
+        description:
+            "Real-time, fault-tolerant systems built with Elixir and Phoenix for unmatched scalability.",
+        icon: Flame,
+        gradient: "from-fuchsia-500 to-violet-500",
     },
     {
         title: "MERN/MEAN Development",
@@ -48,7 +53,7 @@ export const services = [
     {
         title: "Python/Flask Development",
         description: "Scalable Python applications with Flask framework for rapid API development and microservices.",
-        icon: Code,
+        icon: FileCode,
         gradient: "from-yellow-500 to-orange-500",
     },
 ];
@@ -57,7 +62,7 @@ export const services = [
 export const techCategories = [
     {
         category: "Backend",
-        techs: ["Elixir", "Phoenix", "Python", "Flask", "Laravel", "Node.js", "NestJS"],
+        techs: ["Elixir", "Phoenix", "Python", "Flask", "Laravel", "Node.js", "NestJS", "Go"],
     },
     {
         category: "Frontend",
@@ -75,14 +80,18 @@ export const techCategories = [
         category: "Cloud/Infra",
         techs: ["Docker", "Kubernetes", "AWS"],
     },
+    {
+        category: "AI",
+        techs: ["AI Integration", "AI Automation"],
+    },
 ];
 
-// Why REZON Statements
-export const whyRezonStatements = [
-    "Full-service software partner across Php/Laravel, MEAN, MERN, Elixir/Phoenix, React Native, and Python/Flask.",
+// Why Devlixir Statements
+export const whyDevlixirStatements = [
+    "AI-first software partner for practical AI integration, intelligent automation, and modern product engineering.",
+    "Full-service delivery across Php/Laravel, MEAN, MERN, Elixir/Phoenix, Go, React Native, and Python/Flask.",
     "We design, build, update, and maintain systems for the long term—not quick patches.",
-    "We write clean, maintainable code that future teams can confidently extend.",
-    "We ship production-ready systems that scale with your product and business.",
+    "We write clean, maintainable code and ship production-ready systems that scale with your product and business.",
 ];
 
 // Project Portfolio
@@ -187,7 +196,7 @@ export const testimonials: Testimonial[] = [
         company: "NorthStar Financial Group",
         role: "Chief Technology Officer",
         feedback:
-            "REZON transformed our payment infrastructure with their Elixir and Phoenix expertise. We now process 15M+ transactions daily with 99.99% uptime—something we never thought possible. Their deep understanding of real-time systems and fault tolerance is exceptional. The platform has been running flawlessly for 18 months with zero critical incidents.",
+            "Devlixir transformed our payment infrastructure with their Elixir and Phoenix expertise. We now process 15M+ transactions daily with 99.99% uptime—something we never thought possible. Their deep understanding of real-time systems and fault tolerance is exceptional. The platform has been running flawlessly for 18 months with zero critical incidents.",
         rating: 5,
         projectName: "NorthStar Payments",
         techStack: ["Elixir", "Phoenix", "React"],
@@ -198,7 +207,7 @@ export const testimonials: Testimonial[] = [
         company: "Regional Health Systems",
         role: "Chief Medical Information Officer",
         feedback:
-            "Working with REZON on our telemedicine platform was a game-changer. They built a HIPAA-compliant system that handles 200K+ patient consultations monthly. The platform is incredibly fast, secure, and user-friendly. Our patient satisfaction scores increased by 35%, and we've expanded to serve 50+ healthcare networks. REZON's attention to security and compliance is outstanding.",
+            "Working with Devlixir on our telemedicine platform was a game-changer. They built a HIPAA-compliant system that handles 200K+ patient consultations monthly. The platform is incredibly fast, secure, and user-friendly. Our patient satisfaction scores increased by 35%, and we've expanded to serve 50+ healthcare networks. Devlixir's attention to security and compliance is outstanding.",
         rating: 5,
         projectName: "Regional Health Portal",
         techStack: ["Node.js", "NestJS", "React"],
@@ -209,7 +218,7 @@ export const testimonials: Testimonial[] = [
         company: "Global Retail Partners",
         role: "VP of Digital Commerce",
         feedback:
-            "REZON built our multi-vendor marketplace that now processes $50M+ in annual GMV. The platform handles peak traffic effortlessly during Black Friday and holiday seasons. Their Laravel and React implementation is rock-solid. Our merchant base grew from 200 to 1,200+ in just 12 months. The team's expertise in e-commerce architecture is world-class.",
+            "Devlixir built our multi-vendor marketplace that now processes $50M+ in annual GMV. The platform handles peak traffic effortlessly during Black Friday and holiday seasons. Their Laravel and React implementation is rock-solid. Our merchant base grew from 200 to 1,200+ in just 12 months. The team's expertise in e-commerce architecture is world-class.",
         rating: 5,
         projectName: "Global Retail Marketplace",
         techStack: ["Laravel", "React", "PostgreSQL"],
@@ -220,7 +229,7 @@ export const testimonials: Testimonial[] = [
         company: "Strategic Business Solutions",
         role: "VP of Product Engineering",
         feedback:
-            "The WorkFlow Enterprise platform REZON built using Python and Flask has revolutionized how our Fortune 500 clients collaborate. Real-time features work flawlessly with 50,000+ concurrent users. Automated workflows have saved our clients thousands of hours. REZON's team is professional, responsive, and truly understands enterprise requirements.",
+            "The WorkFlow Enterprise platform Devlixir built using Python and Flask has revolutionized how our Fortune 500 clients collaborate. Real-time features work flawlessly with 50,000+ concurrent users. Automated workflows have saved our clients thousands of hours. Devlixir's team is professional, responsive, and truly understands enterprise requirements.",
         rating: 5,
         projectName: "Workflow Enterprise",
         techStack: ["Python", "Flask", "Angular"],
@@ -231,7 +240,7 @@ export const testimonials: Testimonial[] = [
         company: "Urban Food Network",
         role: "Co-Founder & CEO",
         feedback:
-            "REZON created our food delivery app with React Native, and it's been phenomenal. The app is smooth, fast, and has incredible UX. We've grown from 50K to 500K+ active users in 18 months. The real-time GPS tracking and route optimization features are industry-leading. REZON understood our vision and delivered beyond expectations.",
+            "Devlixir created our food delivery app with React Native, and it's been phenomenal. The app is smooth, fast, and has incredible UX. We've grown from 50K to 500K+ active users in 18 months. The real-time GPS tracking and route optimization features are industry-leading. Devlixir understood our vision and delivered beyond expectations.",
         rating: 5,
         projectName: "Urban Food Delivery",
         techStack: ["React Native", "Node.js"],
@@ -242,7 +251,7 @@ export const testimonials: Testimonial[] = [
         company: "Enterprise Cloud Services",
         role: "Director of Infrastructure",
         feedback:
-            "REZON's InfraScale Cloud platform built with Elixir and Kubernetes is exceptional. They reduced our infrastructure costs by 45% while improving performance by 60%. Managing $2M+ in monthly cloud spend is now effortless. Their DevOps expertise and understanding of cloud economics is top-tier. This platform has been a game-changer for our operations.",
+            "Devlixir's InfraScale Cloud platform built with Elixir and Kubernetes is exceptional. They reduced our infrastructure costs by 45% while improving performance by 60%. Managing $2M+ in monthly cloud spend is now effortless. Their DevOps expertise and understanding of cloud economics is top-tier. This platform has been a game-changer for our operations.",
         rating: 5,
         projectName: "InfraScale Cloud",
         techStack: ["Elixir", "Kubernetes", "AWS"],
@@ -263,6 +272,8 @@ export const availableTechStacks = [
     "PHP / Laravel",
     "Node.js / NestJS",
     "React / Next.js",
+    "Go",
+    "AI Integration / Automation",
     "React Native",
     "Angular",
     "Tailwind",

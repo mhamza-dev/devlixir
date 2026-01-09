@@ -21,7 +21,7 @@ clientPromise = client.connect();
 
 export async function getDatabase(): Promise<Db> {
     const client = await clientPromise;
-    return client.db(process.env.NEXT_PUBLIC_MONGODB_DB_NAME || "rezon_projects");
+    return client.db(process.env.NEXT_PUBLIC_MONGODB_DB_NAME || "devlixir_projects");
 }
 
 export default clientPromise;

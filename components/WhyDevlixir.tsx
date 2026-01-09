@@ -1,34 +1,35 @@
+
 "use client";
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
-import { whyRezonStatements } from "@/constants";
+import { whyDevlixirStatements } from "@/constants";
 
-export default function WhyRezon() {
+export default function WhyDevlixir() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <SectionTitle
-          title="Why REZON"
-          subtitle="Built for the long term, designed for excellence"
+          title="Why Devlixir"
+          subtitle="AI-first engineering, built for the long term"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {whyRezonStatements.map((statement, index) => (
+          {whyDevlixirStatements.map((statement, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, scale: 0.9 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 delay: index * 0.15,
                 type: "spring",
                 stiffness: 100
               }}
-              whileHover={{ 
-                y: -8, 
+              whileHover={{
+                y: -8,
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
@@ -38,14 +39,14 @@ export default function WhyRezon() {
                 initial={{ scale: 0, rotate: -180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.5, 
+                transition={{
+                  duration: 0.5,
                   delay: index * 0.15 + 0.2,
                   type: "spring",
                   stiffness: 200
                 }}
-                whileHover={{ 
-                  rotate: 360, 
+                whileHover={{
+                  rotate: 360,
                   scale: 1.2,
                   transition: { duration: 0.5 }
                 }}

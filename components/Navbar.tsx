@@ -48,7 +48,7 @@ export default function Navbar() {
           >
             <Image
               src="/logo.svg"
-              alt="REZON Logo"
+              alt="Devlixir Logo"
               width={120}
               height={40}
               priority

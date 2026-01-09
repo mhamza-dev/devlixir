@@ -93,6 +93,18 @@ export default function ContactCTA() {
                                 <span className="relative z-10">Book a Meeting</span>
                             </Button>
                         </motion.div>
+                        <p className="mt-6 text-sm text-white/60">
+                            Prefer async? Connect with us on{" "}
+                            <a
+                                href="https://www.linkedin.com/company/devlixir"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-[#60A5FA] hover:text-[#93C5FD] underline-offset-2 hover:underline"
+                            >
+                                LinkedIn
+                            </a>
+                            .
+                        </p>
                     </motion.div>
                 </div>
             </section>

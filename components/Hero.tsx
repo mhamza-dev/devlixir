@@ -145,7 +145,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            We are a full-service software engineering studio building and maintaining products across Php/Laravel, MEAN & MERN stacks, Elixir/Phoenix, React Native, and Python/Flask. From greenfield builds to long-term maintenance and upgrades, we keep your software fast, scalable, and reliable.
+            Devlixir is an AI software and product engineering studio. We design, build, and maintain systems across
+            Php/Laravel, MEAN & MERN, Elixir/Phoenix, Go, React Native, and Python/Flask—plus practical AI integration
+            and automation. From greenfield builds to long-term maintenance and upgrades, we keep your software fast,
+            scalable, and reliable.
           </motion.p>
 
           <motion.div

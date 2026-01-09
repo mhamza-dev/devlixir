@@ -9,9 +9,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "REZON - Engineering That Scales. Code That Performs.",
-  description: "We architect real-time, fault-tolerant systems using Elixir. Also delivering MERN/MEAN, Laravel, and React Native solutions.",
-  keywords: ["Elixir", "Phoenix", "MERN", "MEAN", "Laravel", "React Native", "Software Development"],
+  title: "Devlixir - AI Software Engineering & Automation Studio",
+  description:
+    "Devlixir designs, builds, and maintains AI-powered software: practical AI integration, workflow automation, and modern web/mobile systems across Elixir/Phoenix, Go, MERN/MEAN, PHP/Laravel, React Native, and Python/Flask.",
+  keywords: [
+    "Devlixir",
+    "AI Integration",
+    "AI Automation",
+    "Elixir",
+    "Phoenix",
+    "Go",
+    "MERN",
+    "MEAN",
+    "Laravel",
+    "React Native",
+    "Software Development",
+  ],
 };
 
 export default function RootLayout({

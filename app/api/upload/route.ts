@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
             const uploadStream = cloudinary.uploader.upload_stream(
                 {
                     resource_type: resourceType,
-                    folder: "rezon-projects",
+                    folder: "devlixir-projects",
                     use_filename: true,
                     unique_filename: true,
                 },

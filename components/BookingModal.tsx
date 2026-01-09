@@ -44,9 +44,8 @@ export default function BookingModal({
                         if (!baseUrl) return;
 
                         const trimmedEmail = values.email.trim();
-                        const url = `${baseUrl}${
-                            baseUrl.includes("?") ? "&" : "?"
-                        }email=${encodeURIComponent(trimmedEmail)}`;
+                        const url = `${baseUrl}${baseUrl.includes("?") ? "&" : "?"
+                            }email=${encodeURIComponent(trimmedEmail)}`;
 
                         setCalendlyUrl(url);
                     }}
@@ -92,7 +91,7 @@ export default function BookingModal({
                         <iframe
                             src={calendlyUrl}
                             className="w-full h-full"
-                            title="Book a meeting with Rezon"
+                            title="Book a meeting with Devlixir"
                             sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
                         />
                     </div>

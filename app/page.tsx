@@ -4,12 +4,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Stats from "@/components/Stats";
-import About from "@/components/About";
-import WhyRezon from "@/components/WhyRezon";
+import WhyDevlixir from "@/components/WhyDevlixir";
 import TechStack from "@/components/TechStack";
-// import Portfolio from "@/components/Portfolio";
-// import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
 
 const containerVariants = {
@@ -45,12 +41,6 @@ export default function Home() {
         >
           <Hero />
         </motion.div>
-        {/* <motion.div
-          variants={sectionVariants}
-          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-        >
-          <Stats />
-        </motion.div> */}
         <motion.div
           variants={sectionVariants}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -61,13 +51,7 @@ export default function Home() {
           variants={sectionVariants}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
-          <About />
-        </motion.div>
-        <motion.div
-          variants={sectionVariants}
-          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-        >
-          <WhyRezon />
+          <WhyDevlixir />
         </motion.div>
         <motion.div
           variants={sectionVariants}
@@ -75,18 +59,6 @@ export default function Home() {
         >
           <TechStack />
         </motion.div>
-        {/* <motion.div
-          variants={sectionVariants}
-          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-        >
-          <Portfolio />
-        </motion.div>
-        <motion.div
-          variants={sectionVariants}
-          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-        >
-          <Testimonials />
-        </motion.div> */}
         <motion.div
           variants={sectionVariants}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}

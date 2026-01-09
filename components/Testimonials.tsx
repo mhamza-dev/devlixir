@@ -28,7 +28,7 @@ export default function Testimonials() {
             <div className="container mx-auto relative z-10">
                 <SectionTitle
                     title="Client Testimonials"
-                    subtitle="What our clients say about working with REZON"
+                    subtitle="What our clients say about working with Devlixir"
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
